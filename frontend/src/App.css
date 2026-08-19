@@ -1,0 +1,204 @@
+/* =============================================
+   App-level Component Styles
+   ============================================= */
+
+/* ── Layout ─────────────────────────────────── */
+.app-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  width: 100%;
+}
+
+/* ── Hero Header ─────────────────────────────── */
+.hero {
+  text-align: center;
+  margin-bottom: 48px;
+  animation: fadeSlideUp 0.5s ease both;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  background: var(--grad-header);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 14px;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── Form Card ───────────────────────────────── */
+.form-card {
+  position: relative;
+  z-index: 50;
+  padding: 32px;
+  margin-bottom: 24px;
+  animation: fadeSlideUp 0.5s 0.1s ease both;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-title .section-icon {
+  font-size: 1.1rem;
+}
+
+/* Two-column form layout */
+.form-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 720px) {
+  .form-columns { grid-template-columns: 1fr; }
+  .form-card { padding: 20px; }
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Submit Button Area ──────────────────────── */
+.submit-area {
+  position: relative;
+  z-index: 10;
+  margin-top: 8px;
+  animation: fadeSlideUp 0.5s 0.2s ease both;
+}
+
+/* ── Result Card ─────────────────────────────── */
+.result-card {
+  position: relative;
+  z-index: 5;
+  padding: 36px 32px;
+  background: var(--grad-result);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  margin-top: 28px;
+  animation: fadeSlideUp 0.45s ease both;
+  animation-name: pulse-glow, fadeSlideUp;
+  animation-duration: 2.5s, 0.45s;
+  animation-iteration-count: infinite, 1;
+  animation-timing-function: ease-in-out, ease;
+}
+
+.result-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.result-price {
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 900;
+  color: var(--accent-blue);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+}
+
+.result-short {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-purple);
+}
+
+/* ── Metric Badges ───────────────────────────── */
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+
+@media (max-width: 560px) {
+  .metrics-row { grid-template-columns: 1fr; }
+}
+
+.metric-badge {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: center;
+}
+
+.metric-badge .metric-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.metric-badge .metric-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+}
+
+/* ── Error Banner ────────────────────────────── */
+.error-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: var(--radius-md);
+  color: #fca5a5;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  animation: fadeSlideUp 0.35s ease both;
+}
+
+/* ── Footer ──────────────────────────────────── */
+.footer {
+  text-align: center;
+  padding: 32px 24px 24px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}

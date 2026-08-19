@@ -1,0 +1,37 @@
+# Virtual Environments
+venv/
+backend/venv/
+.venv/
+env/
+ENV/
+
+# Node dependencies & builds
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+build/
+
+# Python Cache & Coverage
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+*.egg-info/
+
+# Large Datasets (>50MB)
+notebooks/data/
+*.csv
+
+# Environment Variables & Logs
+.env
+.env.local
+*.log
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
